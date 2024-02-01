@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>Your Dark Mode Website</title>
+    <title>skills ● marcel schreiber</title>
     <style>
         body {
-            background-color: #1a1a1a;
+            background-color: #09131E;
             /* Dark background color */
             color: #E0E1DD;
             /* Light text color */
@@ -16,8 +16,8 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row;
-            /* Change to row */
+            flex-direction: column;
+            /* Change to column */
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -28,14 +28,21 @@
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .hoverable {
-            font-size: 1.2em;
+            font-size: 1.5em;
             cursor: pointer;
             position: relative;
             display: inline-block;
-            margin: 0 10px;
+            margin: 10px 0;
             /* Adjust the margin as needed */
         }
 
@@ -67,30 +74,28 @@
     </style>
 </head>
 
-<body>
+<body class="mbod">
 
-    <h1>skills</h1>
-    <p class="hoverFade">
-        coming soon
-    </p>
+    <div>
+        <h1>
+            skills
+        </h1>
+    </div>
 
+    <div class="menu-container">
+        <svg style="height: 90px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#E0E1DD" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
+    </div>
+        <p onclick='loadPage("home")' class="hoverable">
+            <span class="hoverFade">
+                back
+            </span>
+        </p>
+    </div>
     <script>
         function loadPage(site) {
             switch (site) {
-                case "skills":
-                    window.location.href = "./sites/skills.html";
-                    break;
-
-                case "projects":
-                    window.location.href = "./sites/projects.html";
-                    break;
-
-                case "socials":
-                    window.location.href = "./sites/socials.html";
-                    break;
-
-                case "about":
-                    window.location.href = "./sites/about.html";
+                case "home":
+                    window.location.href = "../index.html";
                     break;
             }
         }
