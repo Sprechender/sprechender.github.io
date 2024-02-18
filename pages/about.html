@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="tui-bg-blue-black">
+
+<head>
+    <meta charset="UTF-8">
+    <title>about\marcelschreiber</title>
+    <script src="../dist/tuicss.min.js"></script>
+    <link rel="stylesheet" href="../dist/tuicss.min.css">
+    <style>
+        .tui-window,
+        .tui-panel {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .info-text {
+            margin-bottom: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center" style="margin-top: 100px; margin-bottom: 100px">
+        <div class="tui-panel white-168 black-255-text">
+            <div class="tui-panel-header">
+                About
+            </div>
+            <div class="tui-panel-content" style="text-align: center;">
+                coming soon...
+                <br><br><br>
+                made with "TuiCss v2.0.0"!
+                <br><br>
+                <div class="center">
+                    <button onclick='redirect("https://marcelschreiber.de")' class="tui-button white-255"
+                        style="width: 80px">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function redirect(url) {
+        location.href = url;
+    }
+</script>
+
+</html>
