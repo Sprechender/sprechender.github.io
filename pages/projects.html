@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="tui-bg-blue-black">
+
+<head>
+    <meta charset="UTF-8">
+    <title>marcelschreiber.de</title>
+    <link rel="stylesheet" href="../dist/tuicss.min.css">
+    <style>
+        .tui-window,
+        .tui-panel {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .info-text {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<script>
+    document.onkeyup = function (data) {
+        switch (data.which) {
+            case 49:
+                show(1);
+                break;
+            case 50:
+                show(2);
+                break;
+            case 51:
+                show(3);
+                break;
+            case 52:
+                show(4);
+                break;
+            case 53:
+                show(5);
+                break;
+            case 54:
+                show(6);
+                break;
+            case 55:
+                show(7);
+                break;
+        }
+    };
+</script>
+
+<body>
+    <div class="center">
+        <div class="tui-panel cyan-168 black-255-text">
+            <div class="tui-panel-content">
+                <b><a style="text-decoration: underline;" href="../index.html">marcelschreiber.de</a>/pages/projects
+            </div>
+        </div>
+        <hr>
+
+        <div class="tui-window purple-168">
+            <fieldset class="tui-fieldset no-legend tui-border-solid" style="width: 300px">
+                <ul style="cursor: pointer;">
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(1)">
+                            <span class="tui-shortcut">1</span>
+                            <span>Profile Page</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(2)">
+                            <span class="tui-shortcut">2</span>
+                            <span>preInstall</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(3)">
+                            <span class="tui-shortcut">3</span>
+                            <span>stream-tools</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(4)">
+                            <span class="tui-shortcut">4</span>
+                            <span>"WVCD" RetroBar Theme</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(5)">
+                            <span class="tui-shortcut">5</span>
+                            <span>py-repo-downloader</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a onclick="show(6)">
+                            <span class="tui-shortcut">6</span>
+                            <span>vrievid</span>
+                        </a>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+
+        <div id="profile-page">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>Profile Page</legend>
+                    The Profile page is this page you are currently seeing! <br>
+                    If you go to "<a href="https://marcelschreiber.de"
+                        style="text-decoration: underline;">marcelschreiber.de</a>" you will see the profile page! <br>
+                    <br>
+                    I made this page in HTML, JS & CSS with the <a href="https://github.com/vinibiavatti1/TuiCss"
+                        style="text-decoration: underline;">TuiCss</a> framework!
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(2)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/sprechender/sprechender.github.io/')">repo</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/vinibiavatti1/TuiCss')">"TuiCss" repo
+                        </button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="preInstall">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>preInstall</legend>
+                    preInstall is a Python script that is designed to run in a command-line environment, offering a user
+                    interface made with <a href="https://github.com/tmbo/questionary">questionary</a> to automate the
+                    installation process of multiple programs. <br>
+                    Similar to winget or apt
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(3)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/sprechender/preinstall')">repo</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/tmbo/questionary')">"questionary" repo</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="stream_tools">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>stream-tools</legend>
+                    stream-tools is a command-line tool designed to enhance the Twitch streaming experience. <br>
+                    Developed using the <a href="https://dev.twitch.tv/docs/api/"
+                        style="text-decoration: underline;">Twitch API</a>, this tool aims to simplify the process of
+                    creating clips and managing stream information such as title, category, and more.
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(4)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/sprechender/stream-tools/')">repo</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://dev.twitch.tv/docs/api')">Twitch API</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="windows_vista_classic_dark_for_retrobar">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>Windows Vista Classic Dark Theme for RetroBar</legend>
+                    This Project is really simple! <br>
+                    This is a modified version of the "Windows Vista Classic" Theme for <a
+                        href="https://github.com/dremin/RetroBar" style="text-decoration: underline;">RetroBar</a> which
+                    makes it dark mode.
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(5)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/Sprechender/dark_vista_classic_retrobar')">repo</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/dremin/RetroBar')">RetroBar repo</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="py_repo_downloader">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>py-repo-downloader</legend>
+                    This python script lets you select using questionary & download specific release assets from a
+                    GitHub repo.
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(6)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/sprechender/py-repo-downloader/')">repo</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="redirect('https://github.com/tmbo/questionary')">questionary repo</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="vrievid">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>vrievid</legend>
+                    vrievid is currently a concept for a video streaming site like YouTube, which is open-source. <br>
+                    I had the idea for this because I'm annoyed with the current choices YouTube does to its platform
+                    (like dislike removal and constant ads).
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(1)">next project</button>
+                    <button class="tui-button purple-168 white-255-text" onclick="https://github.com/sprechender/vrievid-main/">repo</button>
+                </fieldset>
+            </div>
+        </div>
+
+        <div id="cat">
+            <hr>
+            <div class="tui-window">
+                <fieldset class="tui-fieldset">
+                    <legend>Umm.</legend>
+                    This wasnt supposed to happen.
+                    Please don't press random buttons! <br>
+                    <img src="../scripts/totallynotacatgif.gif" height="256" alt="" srcset="">
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="show(1)">next project</button>
+                </fieldset>
+            </div>
+        </div>
+
+</body>
+
+<script src="../dist/tuicss.min.js"></script>
+<script src="../scripts/projects.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</html>

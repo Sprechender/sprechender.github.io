@@ -1,130 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="tui-bg-blue-black">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>marcel schreiber</title>
+    <title>marcelschreiber.de</title>
+    <script src="dist/tuicss.min.js"></script>
+    <link rel="stylesheet" href="dist/tuicss.min.css">
     <style>
-        body {
-            background-color: #09131E;
-            /* Dark background color */
-            color: #E0E1DD;
-            /* Light text color */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            /* Change to column */
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            transition: all 0.5s;
-            /* Added for smoother transition */
-        }
-
-        h1 {
-            font-size: 2em;
+        .tui-window,
+        .tui-panel {
             margin-bottom: 20px;
-            text-align: center;
+            text-align: left;
         }
 
-        .menu-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .info-text {
+            margin-bottom: 10px;
+            color: white;
         }
 
-        .hoverable {
-            font-size: 1.5em;
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            margin: 10px 0;
-            /* Adjust the margin as needed */
-        }
-
-        .hoverable::after {
-            content: '';
+        .center {
+            margin: 0;
             position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #778DA9;
-            /* Initial underline color */
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease-in-out;
-        }
-
-        .hoverable:hover::after {
-            width: 100%;
-            /* Underline fully expands on hover */
-        }
-
-        .hoverFade {
-            color: #415A77;
-            transition: 0.2s ease-in-out;
-        }
-
-        .hoverFade:hover {
-            color: #778DA9;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 
-<body class="mbod">
+<body>
+    <div class="center">
+        <div class="tui-panel cyan-168 black-255-text">
+            <div class="tui-panel-content">
+                <b>marcelschreiber.de
+            </div>
+        </div>
 
-    <div>
-        <h1>
-            marcel schreiber
-        </h1>
+        <hr>
+
+        <div class="info-text" style="text-align: center;">↓ Select page ↓</div>
+        <div class="tui-window purple-168">
+            <fieldset class="tui-fieldset no-legend tui-border-solid" style="width: 300px">
+                <ul>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a href="pages/projects.html">
+                            <span class="tui-shortcut">1</span>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a href="pages/socials.html">
+                            <span class="tui-shortcut">2</span>
+                            <span>Socials</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover">
+                        <a href="pages/about.html">
+                            <span class="tui-shortcut">3</span>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
     </div>
+    <!--
+        
 
-    <div class="menu-container">
-        <p onclick='loadPage("skills")' class="hoverable">
-            <span class="hoverFade">
-                skills
-            </span>
-        </p>
-        <p onclick='loadPage("projects")' class="hoverable">
-            <span class="hoverFade">
-                projects
-            </span>
-        </p>
-        <p onclick='loadPage("socials")' class="hoverable">
-            <span class="hoverFade">
-                socials
-            </span>
-        </p>
-        <p onclick='loadPage("about")' class="hoverable">
-            <span class="hoverFade">
-                about
-            </span>
-        </p>
+        <div class="info-text">Scrool window</div>
+        <div class="tui-window white-168 black-255-text">
+            <fieldset class="tui-fieldset">
+                <legend class="white-255-text">Window</legend>
+                <div style="overflow: scroll; height: 200px; width: 400px; white-space: nowrap;">
+                    <span class="tui-shadow">The Lorem Ipsum </span><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                    Curabitur id vestibulum libero, id fermentum lorem.<br>
+                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
+                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
+                    In quis bibendum libero. Donec nec egestas ipsum.<br>
+                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                    Curabitur id vestibulum libero, id fermentum lorem.<br>
+                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
+                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
+                    In quis bibendum libero. Donec nec egestas ipsum.<br>
+                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                    Curabitur id vestibulum libero, id fermentum lorem.<br>
+                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
+                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
+                    In quis bibendum libero. Donec nec egestas ipsum.<br>
+                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
+                </div>
+            </fieldset>
+        </div>
+
+    <div class="info-text">Fieldset features</div>
+        <div class="tui-window orange-168 black-255-text">
+            <fieldset class="tui-fieldset tui-border-solid white-border">
+                <legend class="center white-255-text">Window</legend>
+                <button class="tui-fieldset-button left"><span class="green-255-text">↑</span></button>
+                <button class="tui-fieldset-button"><span class="green-255-text">■</span></button>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                Curabitur id vestibulum libero, id fermentum lorem.<br>
+                Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
+                Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
+                In quis bibendum libero. Donec nec egestas ipsum.<br>
+                Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
+                <br>
+                <div class="tui-divider"></div>
+                <br>
+                <a class="tui-button white-168">Copy</a>
+                <a class="tui-button white-168">Paste</a>
+                <br><br>
+                <div class="tui-fieldset-text">Text format: UTF-8</div>
+                <div class="tui-fieldset-text right">Ln: 2, Col: 5</div>
+            </fieldset>
+        </div>
+        
+        <div class="info-text">Window textarea</div>
+        <div class="tui-window">
+            <fieldset class="tui-fieldset">
+                <legend class="center">MYAPP.CPP</legend>
+                <button class="tui-fieldset-button"><span class="green-255-text">↑</span></button>
+                <button class="tui-fieldset-button tui-fieldset-button-left"><span class="green-255-text">■</span></button>
+                <textarea class="tui-textarea" style="width: 400px; height: 200px;">#include &#60;iostream&#62;
+                    using namespace std;
+                    
+                    int main()
+                    {
+                        cout &#60;&#60; "Hello, World!";
+                        return 0;
+}</textarea>
+</fieldset>
+</div>
+
+        <div class="info-text">Simple panel</div>
+        <div class="tui-panel cyan-168 black-255-text">
+            <div class="tui-panel-content">
+                <b>NOTE:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Vestibulum a posuere sapien, nec
+                placerat
+                lorem.<br> Aliquam urna lorem, placerat et varius et, aliquam ac libero.
+            </div>
+        </div>
+        
+        <div class="info-text">Panel title</div>
+        <div class="tui-panel white-168 black-255-text">
+            <div class="tui-panel-header">
+                About
+            </div>
+            <div class="tui-panel-content">
+                TuiCss v2.0.0 Made with ♥
+                <br><br>
+                <div class="center">
+                    <button class="tui-button white-255" style="width: 80px">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        function loadPage(site) {
-            switch (site) {
-                case "skills":
-                    window.location.href = "./sites/skills.html";
-                    break;
-
-                case "projects":
-                    window.location.href = "./sites/projects.html";
-                    break;
-
-                case "socials":
-                    window.location.href = "./sites/socials.html";
-                    break;
-
-                case "about":
-                    window.location.href = "./sites/about.html";
-                    break;
-            }
-        }
-    </script>
+-->
 </body>
 
 </html>
