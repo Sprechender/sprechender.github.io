@@ -1,3 +1,5 @@
+let div_Content = document.getElementById("maincontent");
+
 let div_profilePage = document.getElementById("profile-page");
 let div_preInstall = document.getElementById("preInstall");
 let div_stream_tools = document.getElementById("stream_tools");
@@ -53,5 +55,9 @@ function show(toShow) {
 }
 
 function redirect(url) {
-    location.href = url;
+    div_Content.classList.add("animate__fadeOut");
+
+    setTimeout(function () {
+        location.href = url;
+    }, 500); // How long you want the delay to be, measured in milliseconds.
 }

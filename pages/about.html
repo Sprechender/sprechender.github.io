@@ -1,39 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" class="tui-bg-blue-black">
+<html lang="en" class="no-tui-scroll">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>about\marcelschreiber</title>
+    <title>socials\marcelschreiber</title>
     <script src="../dist/tuicss.min.js"></script>
     <link rel="stylesheet" href="../dist/tuicss.min.css">
     <style>
-        .tui-window,
-        .tui-panel {
-            margin-bottom: 20px;
-            text-align: left;
+        .content {
+            padding: 40px 0px;
         }
 
-        .info-text {
-            margin-bottom: 10px;
-            color: white;
+        .sprer__centered_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
     </style>
 </head>
 
-<body>
-    <div class="center" style="margin-top: 100px; margin-bottom: 100px">
-        <div class="tui-panel white-168 black-255-text">
-            <div class="tui-panel-header">
-                About
-            </div>
-            <div class="tui-panel-content" style="text-align: center;">
-                coming soon...
-                <br><br><br>
-                made with "TuiCss v2.0.0"!
-                <br><br>
-                <div class="center">
-                    <button onclick='redirect("https://marcelschreiber.de")' class="tui-button white-255"
-                        style="width: 80px">OK</button>
+<body class="tui-bg-blue-black relative">
+    <!-- Sidenav -->
+    <nav class="tui-sidenav absolute">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="projects.html">
+                    projects
+                </a>
+            </li>
+            <li>
+                <a href="socials.html">
+                    socials
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    about
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Navbar -->
+    <nav class="tui-nav">
+        <ul>
+            <li class="tui-sidenav-button red-168-text">≡</li>
+        </ul>
+    </nav>
+
+    <!-- Edit panel -->
+    <div class="sprer__centered_container">
+        <div class="sprer__centered_vertical">
+            <div class="tui-panel white-168 black-255-text">
+                <div class="tui-panel-header">
+                    About
+                </div>
+
+                <div class="tui-panel-content" style="text-align: center;">
+                    coming soon...
+                    <br><br><br>
+                    made with "TuiCss v2.0.0"!
+                    <br><br>
+                    <div class="center">
+                        <button onclick='redirect("https://marcelschreiber.de")' class="tui-button white-255"
+                            style="width: 80px">OK</button>
+                    </div>
                 </div>
             </div>
         </div>

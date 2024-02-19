@@ -6,6 +6,7 @@
     <title>marcelschreiber.de</title>
     <script src="dist/tuicss.min.js"></script>
     <link rel="stylesheet" href="dist/tuicss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         .tui-window,
         .tui-panel {
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-    <div class="center">
+    <div id="maincontent" class="center animate__animated animate__fadeIn">
         <div class="tui-panel cyan-168 black-255-text">
             <div class="tui-panel-content">
                 <b>marcelschreiber.de
@@ -43,20 +44,20 @@
         <div class="tui-window purple-168">
             <fieldset class="tui-fieldset no-legend tui-border-solid" style="width: 300px">
                 <ul>
-                    <li class="cyan-255-hover black-255-text-hover">
-                        <a href="pages/projects.html">
+                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                        <a onclick="redirect('pages/projects.html')">
                             <span class="tui-shortcut">1</span>
                             <span>Projects</span>
                         </a>
                     </li>
-                    <li class="cyan-255-hover black-255-text-hover">
-                        <a href="pages/socials.html">
+                    <li class="cyan-255-hover black-255-text-hove sprer__hoverabler">
+                        <a onclick="redirect('pages/socials.html')">
                             <span class="tui-shortcut">2</span>
                             <span>Socials</span>
                         </a>
                     </li>
-                    <li class="cyan-255-hover black-255-text-hover">
-                        <a href="pages/about.html">
+                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                        <a onclick="redirect('pages/about.html')">
                             <span class="tui-shortcut">3</span>
                             <span>About</span>
                         </a>
@@ -65,101 +66,18 @@
             </fieldset>
         </div>
     </div>
-    <!--
-        
-
-        <div class="info-text">Scrool window</div>
-        <div class="tui-window white-168 black-255-text">
-            <fieldset class="tui-fieldset">
-                <legend class="white-255-text">Window</legend>
-                <div style="overflow: scroll; height: 200px; width: 400px; white-space: nowrap;">
-                    <span class="tui-shadow">The Lorem Ipsum </span><br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                    Curabitur id vestibulum libero, id fermentum lorem.<br>
-                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
-                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
-                    In quis bibendum libero. Donec nec egestas ipsum.<br>
-                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                    Curabitur id vestibulum libero, id fermentum lorem.<br>
-                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
-                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
-                    In quis bibendum libero. Donec nec egestas ipsum.<br>
-                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                    Curabitur id vestibulum libero, id fermentum lorem.<br>
-                    Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
-                    Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
-                    In quis bibendum libero. Donec nec egestas ipsum.<br>
-                    Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
-                </div>
-            </fieldset>
-        </div>
-
-    <div class="info-text">Fieldset features</div>
-        <div class="tui-window orange-168 black-255-text">
-            <fieldset class="tui-fieldset tui-border-solid white-border">
-                <legend class="center white-255-text">Window</legend>
-                <button class="tui-fieldset-button left"><span class="green-255-text">↑</span></button>
-                <button class="tui-fieldset-button"><span class="green-255-text">■</span></button>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Curabitur id vestibulum libero, id fermentum lorem.<br>
-                Aenean aliquam erat leo, eu tempus ex ornare eu.<br>
-                Sed ut lacus libero. Etiam rhoncus ipsum arcu.<br>
-                In quis bibendum libero. Donec nec egestas ipsum.<br>
-                Sed in venenatis diam. Nullam sollicitudin risus vel.<br>
-                <br>
-                <div class="tui-divider"></div>
-                <br>
-                <a class="tui-button white-168">Copy</a>
-                <a class="tui-button white-168">Paste</a>
-                <br><br>
-                <div class="tui-fieldset-text">Text format: UTF-8</div>
-                <div class="tui-fieldset-text right">Ln: 2, Col: 5</div>
-            </fieldset>
-        </div>
-        
-        <div class="info-text">Window textarea</div>
-        <div class="tui-window">
-            <fieldset class="tui-fieldset">
-                <legend class="center">MYAPP.CPP</legend>
-                <button class="tui-fieldset-button"><span class="green-255-text">↑</span></button>
-                <button class="tui-fieldset-button tui-fieldset-button-left"><span class="green-255-text">■</span></button>
-                <textarea class="tui-textarea" style="width: 400px; height: 200px;">#include &#60;iostream&#62;
-                    using namespace std;
-                    
-                    int main()
-                    {
-                        cout &#60;&#60; "Hello, World!";
-                        return 0;
-}</textarea>
-</fieldset>
-</div>
-
-        <div class="info-text">Simple panel</div>
-        <div class="tui-panel cyan-168 black-255-text">
-            <div class="tui-panel-content">
-                <b>NOTE:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Vestibulum a posuere sapien, nec
-                placerat
-                lorem.<br> Aliquam urna lorem, placerat et varius et, aliquam ac libero.
-            </div>
-        </div>
-        
-        <div class="info-text">Panel title</div>
-        <div class="tui-panel white-168 black-255-text">
-            <div class="tui-panel-header">
-                About
-            </div>
-            <div class="tui-panel-content">
-                TuiCss v2.0.0 Made with ♥
-                <br><br>
-                <div class="center">
-                    <button class="tui-button white-255" style="width: 80px">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 </body>
+
+<script>
+    let div_Content = document.getElementById("maincontent");
+
+    function redirect(url) {
+        div_Content.classList.add("animate__fadeOut");
+
+        setTimeout(function () {
+            location.href = url;
+        }, 500); // How long you want the delay to be, measured in milliseconds.
+    }
+</script>
 
 </html>
