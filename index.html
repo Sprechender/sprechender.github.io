@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="tui-bg-blue-black">
+<html style="background-color: #000066;" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>marcelschreiber.de</title>
-    <script src="dist/tuicss.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/tuicss.min.css">
+    <link rel="stylesheet" href="dist/sprer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         .tui-window,
@@ -24,39 +25,65 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+            width: 100%;
+            /* Occupy full width */
+            box-sizing: border-box;
+            /* Ensure padding and border are included in width */
+            padding: 0 20px;
+            /* Add some padding to the sides */
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 200px) {
+            .center {
+                padding: 0;
+                /* Reset padding for smaller screens */
+            }
+
+            .tui-window {
+                width: 100%;
+                /* Occupy full width */
+            }
+
+            .tui-fieldset {
+                width: 100%;
+                /* Occupy full width */
+            }
+
+            ul {
+                padding-left: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="maincontent" class="center animate__animated animate__fadeIn">
+    <div class="center animate__animated animate__fadeIn" id="maincontent">
         <div class="tui-panel cyan-168 black-255-text">
             <div class="tui-panel-content">
-                <b>marcelschreiber.de
+                <b><a>marcelschreiber.de</a>
             </div>
         </div>
-
-        <hr>
-
-        <div class="info-text" style="text-align: center;">↓ Select page ↓</div>
+        <hr style="opacity: 0;">
+        <span style="color: white;">↓ Select page ↓</span>
+        <hr style="opacity: 0;">
         <div class="tui-window purple-168">
             <fieldset class="tui-fieldset no-legend tui-border-solid" style="width: 300px">
-                <ul>
-                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                <ul style="cursor: pointer;">
+                    <li class="cyan-255-hover black-255-text-hover">
                         <a onclick="redirect('pages/projects.html')">
                             <span class="tui-shortcut">1</span>
                             <span>Projects</span>
                         </a>
                     </li>
-                    <li class="cyan-255-hover black-255-text-hove sprer__hoverabler">
+                    <li class="cyan-255-hover black-255-text-hover">
                         <a onclick="redirect('pages/socials.html')">
                             <span class="tui-shortcut">2</span>
                             <span>Socials</span>
                         </a>
                     </li>
-                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                    <li class="cyan-255-hover black-255-text-hover">
                         <a onclick="redirect('pages/about.html')">
                             <span class="tui-shortcut">3</span>
                             <span>About</span>
@@ -65,11 +92,55 @@
                 </ul>
             </fieldset>
         </div>
-    </div>
+
+        <div style="display: none;" id="cat">
+            <div class="tui-window animate__animated animate__bounce ">
+                <fieldset class="tui-fieldset">
+                    <legend>Umm.</legend>
+                    This wasnt supposed to happen.
+                    Please don't press random buttons! <br>
+                    <img src="scripts/totallynotacatgif.gif" height="256" alt="" srcset="">
+                    <br>
+                    <br>
+                    <button class="tui-button purple-168 white-255-text" onclick="unshowCat()">close</button>
+                </fieldset>
+            </div>
+        </div>
+
 </body>
 
+<script src="dist/tuicss.min.js"></script>
+<script src="scripts/funcIndex.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <script>
-    let div_Content = document.getElementById("maincontent");
+    div_Cat = document.getElementById("cat")
+    div_Content = document.getElementById("maincontent")
+
+    document.onkeyup = function (data) {
+        switch (data.which) {
+            case 49:
+                redirect("pages/projects.html")
+                break;
+            case 50:
+                redirect("pages/socials.html")
+                break;
+            case 51:
+                redirect("pages/about.html")
+                break;
+            case 52:
+                if (div_Cat.style.display == "none") {
+                    div_Cat.style.display = "block"
+                } else {
+                    div_Cat.style.display = "none";
+                }
+                break;
+        }
+    };
+
+    function unshowCat() {
+        div_Cat.style.display = "none";
+    }
 
     function redirect(url) {
         div_Content.classList.add("animate__fadeOut");

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="tui-bg-blue-black">
+
+<head>
+    <meta charset="UTF-8">
+    <title>marcelschreiber.de</title>
+    <script src="dist/tuicss.min.js"></script>
+    <link rel="stylesheet" href="dist/tuicss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .tui-window,
+        .tui-panel {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .info-text {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maincontent" class="center animate__animated animate__fadeIn">
+        <div class="tui-panel cyan-168 black-255-text">
+            <div class="tui-panel-content">
+                <b>marcelschreiber.de
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="info-text" style="text-align: center;">↓ Select page ↓</div>
+        <div class="tui-window purple-168">
+            <fieldset class="tui-fieldset no-legend tui-border-solid" style="width: 300px">
+                <ul>
+                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                        <a onclick="redirect('pages/projects.html')">
+                            <span class="tui-shortcut">1</span>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hove sprer__hoverabler">
+                        <a onclick="redirect('pages/socials.html')">
+                            <span class="tui-shortcut">2</span>
+                            <span>Socials</span>
+                        </a>
+                    </li>
+                    <li class="cyan-255-hover black-255-text-hover sprer__hoverable">
+                        <a onclick="redirect('pages/about.html')">
+                            <span class="tui-shortcut">3</span>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+<script>
+    let div_Content = document.getElementById("maincontent");
+
+    function redirect(url) {
+        div_Content.classList.add("animate__fadeOut");
+
+        setTimeout(function () {
+            location.href = url;
+        }, 500); // How long you want the delay to be, measured in milliseconds.
+    }
+</script>
+
+</html>
