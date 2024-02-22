@@ -8,6 +8,8 @@
     <title>socials\marcelschreiber</title>
     <script src="../dist/tuicss.min.js"></script>
     <link rel="stylesheet" href="../dist/tuicss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../dist/sprer.css">
     <style>
         .content {
             padding: 40px 0px;
@@ -26,7 +28,7 @@
     </style>
 </head>
 
-<body class="tui-bg-blue-black relative">
+<body id="maincontent" class="tui-bg-blue-black relative animate__animated animate__fadeIn">
     <!-- Edit panel -->
     <div class="sprer__centered_container">
         <div class="sprer__centered_vertical">
@@ -41,8 +43,8 @@
                     made with "TuiCss v2.0.0"!
                     <br><br>
                     <div class="center">
-                        <button onclick='redirect("https://marcelschreiber.de")' class="tui-button white-255"
-                            style="width: 80px">OK</button>
+                        <button onclick='redirect("../index.html")'
+                            class="tui-button white-255 sprer__hoverable" style="width: 80px">OK</button>
                     </div>
                 </div>
             </div>
@@ -51,8 +53,14 @@
 </body>
 
 <script>
+    div_Content = document.getElementById("maincontent")
+
     function redirect(url) {
-        location.href = url;
+        div_Content.classList.add("animate__fadeOut");
+
+        setTimeout(function () {
+            location.href = url;
+        }, 550); // How long you want the delay to be, measured in milliseconds.
     }
 </script>
 

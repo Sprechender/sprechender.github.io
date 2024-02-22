@@ -7,6 +7,8 @@
     <title>socials\marcelschreiber</title>
     <script src="../dist/tuicss.min.js"></script>
     <link rel="stylesheet" href="../dist/tuicss.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../dist/sprer.css">
     <style>
         .content {
             padding: 40px 0px;
@@ -35,27 +37,27 @@
     </style>
 </head>
 
-<body class="tui-bg-blue-black relative">
+<body class="relative animate__animated animate__fadeIn" id="maincontent">
     <!-- Sidenav -->
     <nav class="tui-sidenav absolute">
         <ul>
             <li>
-                <a href="../index.html">
+                <a onclick="redirect('../index.html')">
                     home
                 </a>
             </li>
             <li>
-                <a href="projects.html">
+                <a onclick="redirect('projects.html')">
                     projects
                 </a>
             </li>
             <li>
-                <a href="socials.html">
+                <a onclick="redirect('socials.html')">
                     socials
                 </a>
             </li>
             <li>
-                <a href="about.html">
+                <a onclick="redirect('about.html')">
                     about
                 </a>
             </li>
@@ -82,7 +84,7 @@
                     <fieldset class="tui-fieldset">
                         Twitch
                         <hr>
-                        twitch/<a href="https://twitch.tv/sprechender" style="text-decoration: underline;">Sprechender</a>
+                        twitch/<a class="sprer__hoverable" onclick="redirect('https://twitch.tv/sprechender')" style="text-decoration: underline;">Sprechender</a>
                     </fieldset>
                 </div>
             </div>
@@ -91,7 +93,7 @@
                     <fieldset class="tui-fieldset">
                         YouTube
                         <hr>
-                        youtube/<a href="https://youtube.com/@sprechend" style="text-decoration: underline;">@Sprechend</a>
+                        youtube/<a class="sprer__hoverable" onclick="redirect('https://youtube.com/@sprechend')" style="text-decoration: underline;">@Sprechend</a>
                     </fieldset>
                 </div>
             </div>
@@ -100,7 +102,7 @@
                     <fieldset class="tui-fieldset">
                         GitHub
                         <hr>
-                        github/<a href="https://github.com/Sprechender" style="text-decoration: underline;">Sprechender</a>
+                        github/<a class="sprer__hoverable" onclick="redirect('https://github.com/Sprechender')" style="text-decoration: underline;">Sprechender</a>
                     </fieldset>
                 </div>
             </div>
@@ -111,7 +113,7 @@
                     <fieldset class="tui-fieldset">
                         Discord
                         <hr>
-                        dsc.gg/<a href="https://dsc.gg/redapple" style="text-decoration: underline;">redapple</a>
+                        dsc.gg/<a class="sprer__hoverable" onclick="redirect('https://dsc.gg/redapple')" style="text-decoration: underline;">redapple</a>
                     </fieldset>
                 </div>
             </div>
@@ -120,7 +122,7 @@
                     <fieldset class="tui-fieldset">
                         TikTok
                         <hr>
-                        tiktok/<a href="https://tiktok.com/sprechendertv" style="text-decoration: underline;">SprechenderTV</a>
+                        tiktok/<a class="sprer__hoverable" onclick="redirect('https://tiktok.com/@sprechendertv')" style="text-decoration: underline;">SprechenderTV</a>
                     </fieldset>
                 </div>
             </div>
@@ -129,12 +131,24 @@
                     <fieldset class="tui-fieldset">
                         Instagram
                         <hr>
-                        instagram/<a href="https://instagram.com/Ausprechender" style="text-decoration: underline;">Sprechender</a>
+                        instagram/<a class="sprer__hoverable" onclick="redirect('https://instagram.com/Ausprechender')" style="text-decoration: underline;">Sprechender</a>
                     </fieldset>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    div_Content = document.getElementById("maincontent")
+
+    function redirect(url) {
+        div_Content.classList.add("animate__fadeOut");
+
+        setTimeout(function () {
+            location.href = url;
+        }, 550); // How long you want the delay to be, measured in milliseconds.
+    }
+</script>
 
 </html>
