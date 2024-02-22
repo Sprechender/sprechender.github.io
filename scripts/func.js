@@ -59,5 +59,5 @@ function redirect(url) {
 
     setTimeout(function () {
         location.href = url;
-    }, 500); // How long you want the delay to be, measured in milliseconds.
+    }, 550); // How long you want the delay to be, measured in milliseconds.
 }
