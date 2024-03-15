@@ -128,12 +128,15 @@
             case 51:
                 redirect("pages/about.html")
                 break;
-            default:
+            case 52, 53, 54, 55, 56, 57:
                 if (div_Cat.style.display == "none") {
                     div_Cat.style.display = "block"
                 } else {
                     div_Cat.style.display = "none";
                 }
+                break;
+            case 58:
+                div_Cat.style.display = "none";
                 break;
         }
     };
